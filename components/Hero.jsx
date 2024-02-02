@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="relative h-full ">
+    <div className="relative h-full container mx-auto">
       <h1 className="text-light text-[144px] font-poppins font-bold mt-32 relative">
         Giftroom
         <Image

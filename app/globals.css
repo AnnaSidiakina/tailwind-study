@@ -55,4 +55,13 @@ body {
   .descriptionNotActive {
     @apply bg-white text-blueCustom blur-sm relative z-0;
   }
+  .stepsContainer {
+    @apply flex px-8 py-10 rounded-2xl border-2 border-grey/[0.5] items-center;
+  }
+  .stepsNumber {
+    @apply text-grey/[0.15] font-montserrat text-7xl font-extrabold mr-8;
+  }
+  .stepsDescription {
+    @apply text-greenDark font-montserrat text-lg font-light;
+  }
 }

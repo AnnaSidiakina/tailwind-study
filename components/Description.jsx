@@ -24,7 +24,7 @@ function Description() {
   }
 
   return (
-    <div id="description" className="mx-12">
+    <div id="description" className="container mx-auto">
       <h2 className="font-poiret text-greenDark text-5xl">Description</h2>
       <Swiper
         modules={[Navigation, EffectCards]}
