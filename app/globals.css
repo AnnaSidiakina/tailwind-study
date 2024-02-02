@@ -46,4 +46,13 @@ body {
   .container {
     @apply my-12;
   }
+  .description {
+    @apply p-14 w-[400px] h-[500px] flex justify-center items-center font-montserrat text-3xl font-light text-center rounded-2xl shadow-2xl relative;
+  }
+  .descriptionActive {
+    @apply bg-blueCustom text-white blur-none relative z-50;
+  }
+  .descriptionNotActive {
+    @apply bg-white text-blueCustom blur-sm relative z-0;
+  }
 }

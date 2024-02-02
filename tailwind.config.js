@@ -22,12 +22,9 @@ module.exports = {
         blueCustom: "#75CEFF",
         blueBg: "#c1effc3d",
         light: "#FFFDFD",
+        greenDark: "#3E748F",
       },
-      // backgroundImage: {
-      //   hero1: url("/public/3d.png"),
-      //   hero2: url("/public/heroPhone.png"),
-      // },
     },
   },
-  plugins: [],
+  plugins: [require("@xpd/tailwind-3dtransforms")],
 };
