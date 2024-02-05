@@ -26,13 +26,14 @@ function Description() {
   return (
     <div id="description" className="container mx-auto">
       <h2 className="font-poiret text-greenDark text-5xl">Description</h2>
+
       <Swiper
         modules={[Navigation, EffectCards]}
         loop={true}
         centeredSlides={true}
         effect={"cards"}
         cardsEffect={{
-          perSlideOffset: 50,
+          perSlideOffset: 30,
           perSlideRotate: 0,
           slideShadows: false,
         }}
@@ -40,40 +41,39 @@ function Description() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        spaceBetween={0}
-        slidesPerView={3}
+        initialSlide={2}
+        // spaceBetween={0}
+        slidesPerView={2}
         onSlideChange={(e) => setIsActive(e.realIndex + 1)}
         className="mt-12"
       >
-        <SwiperSlide key={1}>
+        <SwiperSlide key={1} className="translate-z-full">
           <div
             className={`description ${
-              setId(1) ? "descriptionActive" : "descriptionNotActive"
+              setId(1) ? "descriptionActive " : "descriptionNotActive"
             }`}
           >
-            Share your dream to your World and it will come true!
+            Dream, visualize, plan, strive, save and get!
           </div>
         </SwiperSlide>
-
         <SwiperSlide key={2}>
           <div
             className={`description ${
               setId(2) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            A mobile application for those who believe in miracles and the
-            fulfillment of desires!
+            Share your dream to your World and it will come true!
           </div>
         </SwiperSlide>
+
         <SwiperSlide key={3}>
           <div
             className={`description ${
               setId(3) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            You can create your own wishes (thereby prompting your loved ones
-            what to give you for the upcoming holiday), as well as reserve gifts
-            for your friends.
+            A mobile application for those who believe in miracles and the
+            fulfillment of desires!
           </div>
         </SwiperSlide>
         <SwiperSlide key={4}>
@@ -82,9 +82,9 @@ function Description() {
               setId(4) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            Now you do not need to rack your brains thinking up another erunda,
-            you can just go to a friend&apos;s profile and spy on what he dreams
-            of.
+            You can create your own wishes (thereby prompting your loved ones
+            what to give you for the upcoming holiday), as well as reserve gifts
+            for your friends.
           </div>
         </SwiperSlide>
         <SwiperSlide key={5}>
@@ -93,7 +93,9 @@ function Description() {
               setId(5) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            Giving a cherished, long-awaited present is much more pleasant!
+            Now you do not need to rack your brains thinking up another erunda,
+            you can just go to a friend&apos;s profile and spy on what he dreams
+            of.
           </div>
         </SwiperSlide>
         <SwiperSlide key={6}>
@@ -102,16 +104,16 @@ function Description() {
               setId(6) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            After all, now you will be sure that you will like it.
+            Giving a cherished, long-awaited present is much more pleasant!
           </div>
         </SwiperSlide>
-        <SwiperSlide key={7} className="translate-z-full">
+        <SwiperSlide key={7}>
           <div
             className={`description ${
-              setId(7) ? "descriptionActive " : "descriptionNotActive"
+              setId(7) ? "descriptionActive" : "descriptionNotActive"
             }`}
           >
-            Dream, visualize, plan, strive, save and get!
+            After all, now you will be sure that you will like it.
           </div>
         </SwiperSlide>
 

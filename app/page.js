@@ -20,7 +20,9 @@ export default function Home() {
       <Description />
       <Steps />
       <Download />
-      <Reviews />
+      <div className="bg-lightBlue">
+        <Reviews />
+      </div>
       <ContactForm />
       <Footer />
     </main>

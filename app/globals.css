@@ -64,4 +64,7 @@ body {
   .stepsDescription {
     @apply text-greenDark font-montserrat text-lg font-light;
   }
+  .disableButton {
+    @apply fill-grey;
+  }
 }
