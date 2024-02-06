@@ -41,8 +41,8 @@ function Reviews() {
     <div id="reviews" className="container mx-auto pt-16 pb-8">
       <h2 className="text-greenDark font-poiret text-5xl">Reviews</h2>
       <ul className="mt-20 grid grid-cols-2 justify-between gap-40">
-        {reviewsToDisplay.map(({ review, avatar, name, index }) => (
-          <li key={index}>
+        {reviewsToDisplay.map(({ review, avatar, name, id }) => (
+          <li key={id}>
             <p className="font-montserrat text-2xl font-light">
               <Image
                 src="/quotesTop.svg"

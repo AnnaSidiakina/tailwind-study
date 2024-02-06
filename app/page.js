@@ -20,7 +20,7 @@ export default function Home() {
       <Description />
       <Steps />
       <Download />
-      <div className="bg-lightBlue">
+      <div className="bg-lightBlue mt-14">
         <Reviews />
       </div>
       <ContactForm />
