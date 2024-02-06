@@ -24,7 +24,9 @@ export default function Home() {
         <Reviews />
       </div>
       <ContactForm />
-      <Footer />
+      <div className="bg-skyBlue">
+        <Footer />
+      </div>
     </main>
   );
 }
