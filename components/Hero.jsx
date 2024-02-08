@@ -18,12 +18,12 @@ function Hero() {
         Application for the best friends
       </p>
       <ul className="flex mt-[115px] gap-8">
-        <li className="relative z-50">
+        <li className="relative z-50 hover:scale-105 transition-all">
           <a href="https://www.apple.com/de/store" target="_blank">
             <Image src="/Apple.svg" alt="apple" width={250} height={82} />
           </a>
         </li>
-        <li className="relative z-50">
+        <li className="relative z-50 hover:scale-105 transition-all">
           <a href="https://play.google.com/store" target="_blank">
             <Image src="/Android.svg" alt="apple" width={250} height={82} />
             <Image

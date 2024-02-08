@@ -96,7 +96,7 @@ function ContactForm() {
         <div className="flex justify-center mt-14">
           <button
             type="submit"
-            className="bg-grey p-4 w-[400px] rounded-2xl text-white font-poppins text-2xl font-bold"
+            className="bg-grey hover:bg-[#7fa1b3] transition-all p-4 w-[400px] rounded-2xl text-white font-poppins text-2xl font-bold"
           >
             Send
           </button>

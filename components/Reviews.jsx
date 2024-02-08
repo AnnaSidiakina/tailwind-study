@@ -1,48 +1,39 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/thumbs";
+import "swiper/css/effect-coverflow";
+import "swiper/css/mousewheel";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import "swiper/css/grid";
 import { reviewsData } from "@/constants/reviews";
 import Image from "next/image";
 import ArrowLeft from "../public/ArrowLeft.svg";
 import ArrowRight from "../public/ArrowRight.svg";
 
 function Reviews() {
-  const [initialIndex, setInitialIndex] = useState(0);
-  const [reviewsToDisplay, setReviewsTpoDisplay] = useState(
-    reviewsData.slice(initialIndex, initialIndex + 2)
-  );
-  const [isLeftButtonDisabled, setIsLeftButtonDisabled] = useState(false);
-  const [isRightButtonDisabled, setIsRightButtonDisabled] = useState(false);
-
-  const handleRightClick = () => {
-    setInitialIndex((prevState) => prevState + 1);
-  };
-
-  const handleLeftClick = () => {
-    setInitialIndex((prevState) => prevState - 1);
-  };
-
-  useEffect(() => {
-    setReviewsTpoDisplay(reviewsData.slice(initialIndex, initialIndex + 2));
-
-    if (reviewsData.length === initialIndex + 1) {
-      setIsRightButtonDisabled(true);
-    } else {
-      setIsRightButtonDisabled(false);
-    }
-    if (initialIndex === 0) {
-      setIsLeftButtonDisabled(true);
-    } else {
-      setIsLeftButtonDisabled(false);
-    }
-  }, [initialIndex]);
-
   return (
     <div id="reviews" className="container mx-auto pt-16 pb-8">
       <h2 className="text-greenDark font-poiret text-5xl">Reviews</h2>
-      <ul className="mt-20 grid grid-cols-2 justify-between gap-40">
-        {reviewsToDisplay.map(({ review, avatar, name, id }) => (
-          <li key={id}>
+      <Swiper
+        modules={[Navigation]}
+        speed={1000}
+        slidesPerView={2}
+        spaceBetween={190}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        className="mt-20"
+      >
+        {reviewsData.map(({ review, avatar, name, id }) => (
+          <SwiperSlide key={id}>
             <p className="font-montserrat text-2xl font-light">
               <Image
                 src="/quotesTop.svg"
@@ -70,23 +61,13 @@ function Reviews() {
                 {name}
               </p>
             </div>
-          </li>
+          </SwiperSlide>
         ))}
-      </ul>
-      <div className="flex justify-center gap-[190px] mt-16">
-        <button disabled={isLeftButtonDisabled} onClick={handleLeftClick}>
-          <ArrowLeft className={`${isLeftButtonDisabled && "disableButton"}`} />
-        </button>
-        <button
-          className={`${isRightButtonDisabled} && "disableButton"`}
-          onClick={handleRightClick}
-          disabled={isRightButtonDisabled}
-        >
-          <ArrowRight
-            className={`${isRightButtonDisabled && "disableButton"}`}
-          />
-        </button>
-      </div>
+        <div className="flex justify-center gap-[190px] mt-16">
+          <button className="swiper-button-prev"></button>
+          <button className="swiper-button-next "></button>
+        </div>
+      </Swiper>
     </div>
   );
 }

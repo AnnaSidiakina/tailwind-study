@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { SiTelegram } from "react-icons/si";
 
 function Footer() {
   return (
@@ -9,12 +10,12 @@ function Footer() {
           ADDITIONAL INFORMATION
         </h3>
         <p className="mb-4">
-          <a href="#contactForm" className="font-montserrat text-sm">
+          <a href="#contactForm" className="footerItem">
             CONTACT US
           </a>
         </p>
         <p>
-          <a href="#" className="font-montserrat text-sm">
+          <a href="#" className="footerItem">
             FAQ
           </a>
         </p>
@@ -24,17 +25,17 @@ function Footer() {
           LEGAL INFORMATION
         </h3>
         <p className="mb-4">
-          <a href="#" className="font-montserrat text-sm">
+          <a href="#" className="footerItem">
             PRIVACY POLICY
           </a>
         </p>
         <p className="mb-4">
-          <a href="#" className="font-montserrat text-sm">
+          <a href="#" className="footerItem">
             USE OF COOKIES
           </a>
         </p>
         <p>
-          <a href="#" className="font-montserrat text-sm">
+          <a href="#" className="footerItem">
             TERMS OF SERVICE
           </a>
         </p>
@@ -46,32 +47,17 @@ function Footer() {
         <ul className="flex gap-12">
           <li>
             <a href="https://www.instagram.com/" target="blank">
-              <Image
-                src="/instagram.svg"
-                alt="instagram"
-                width={40}
-                height={40}
-              />
+              <FaInstagram size={42} color="white" className="socialIcon" />
             </a>
           </li>
           <li>
             <a href="https://web.telegram.org/a/" target="blank">
-              <Image
-                src="/telegram.svg"
-                alt="telegram"
-                width={40}
-                height={40}
-              />
+              <SiTelegram size={42} color="white" className="socialIcon" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/" target="blank">
-              <Image
-                src="/facebook.svg"
-                alt="facebook"
-                width={40}
-                height={40}
-              />
+              <FaFacebook size={42} color="white" className="socialIcon" />
             </a>
           </li>
         </ul>

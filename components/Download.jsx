@@ -25,21 +25,25 @@ function Download() {
               className="mt-8"
             />
             <ul className="mt-14 flex gap-3">
-              <li>
-                <Image
-                  src="/Apple.svg"
-                  alt="Apple store"
-                  width={177}
-                  height={63}
-                />
+              <li className=" hover:scale-105 transition-all">
+                <a href="https://www.apple.com/de/store" target="_blank">
+                  <Image
+                    src="/Apple.svg"
+                    alt="Apple store"
+                    width={177}
+                    height={63}
+                  />
+                </a>
               </li>
-              <li>
-                <Image
-                  src="/Android.svg"
-                  alt="Android store"
-                  width={177}
-                  height={63}
-                />
+              <li className=" hover:scale-105 transition-all">
+                <a href="https://play.google.com/store" target="_blank">
+                  <Image
+                    src="/Android.svg"
+                    alt="Android store"
+                    width={177}
+                    height={63}
+                  />
+                </a>
               </li>
             </ul>
           </div>

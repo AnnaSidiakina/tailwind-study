@@ -118,22 +118,8 @@ function Description() {
         </SwiperSlide>
 
         <div className="flex justify-center gap-[190px] mt-16">
-          <button className="swiper-button-prev">
-            <Image
-              alt="arrow left"
-              src="/ArrowLeft.svg"
-              width={70}
-              height={3}
-            />
-          </button>
-          <button className="swiper-button-next">
-            <Image
-              alt="arrow right"
-              src="/ArrowRight.svg"
-              width={70}
-              height={3}
-            />
-          </button>
+          <button className="swiper-button-prev hover:scale-105 transition-all"></button>
+          <button className="swiper-button-next hover:scale-105 transition-all"></button>
         </div>
       </Swiper>
     </div>

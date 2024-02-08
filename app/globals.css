@@ -70,4 +70,19 @@ body {
   .input {
     @apply block py-5 px-6 border-greenGrey/50 border-solid border-2 rounded-2xl bg-lightGrey/[0.08] placeholder:text-greenGrey placeholder:font-montserrat placeholder:text-xl placeholder:font-light w-[500px];
   }
+  .menu {
+    @apply font-poppins font-light text-white hover:text-slate-100 text-lg transition-all;
+  }
+  .footerItem {
+    @apply font-montserrat text-sm hover:text-greenGrey;
+  }
+  .socialIcon {
+    @apply hover:fill-slate-500 hover:scale-105 transition-all;
+  }
+  .swiper-button-next {
+    @apply bg-[url("/ArrowRight.svg")] w-[74px] h-[24px] bg-no-repeat bg-cover opacity-100 disabled:opacity-50;
+  }
+  .swiper-button-prev {
+    @apply bg-[url("/ArrowLeft.svg")] w-[74px] h-[24px] bg-no-repeat bg-cover opacity-100 disabled:opacity-50;
+  }
 }
