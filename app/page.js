@@ -7,6 +7,7 @@ import {
   Hero,
   Reviews,
   Steps,
+  ScrollToTopButton,
 } from "../components";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <div className="bg-skyBlue">
         <Footer />
       </div>
+      <ScrollToTopButton />
     </main>
   );
 }

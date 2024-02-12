@@ -6,6 +6,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 import Reviews from "./Reviews";
 import Steps from "./Steps";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export {
   ContactForm,
@@ -16,4 +17,5 @@ export {
   Hero,
   Reviews,
   Steps,
+  ScrollToTopButton,
 };

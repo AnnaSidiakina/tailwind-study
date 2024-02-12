@@ -42,7 +42,6 @@ function Description() {
           prevEl: ".swiper-button-prev",
         }}
         initialSlide={2}
-        // spaceBetween={0}
         slidesPerView={2}
         onSlideChange={(e) => setIsActive(e.realIndex + 1)}
         className="mt-12"
